@@ -4,7 +4,7 @@ import axios from 'axios'
 const production  = 'https://heroku-movie-back.herokuapp.com/api';
 const development = 'http://localhost:5000/api';
 const url = (process.env.NODE_ENV ? production : development);
-
+// const url = development;
 const api = axios.create({
     baseURL: url
 })
