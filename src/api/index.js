@@ -1,8 +1,12 @@
 import axios from 'axios'
 
-let development = process.env.NODE_ENV !== 'production'
+
+const production  = 'https://heroku-movie-back.herokuapp.com/api';
+const development = 'http://localhost:5000/api';
+const url = (process.env.NODE_ENV ? production : development);
+
 const api = axios.create({
-    baseURL: development ? 'http://localhost:5000/api' : 'https://heroku-movie-back.herokuapp.com/api'
+    baseURL: url
 })
 
 export const insertMovie = payload => api.post(`/movie`, payload)
