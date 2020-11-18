@@ -43,7 +43,10 @@ class DeleteMovie extends Component {
             )
         ) {
             api.deleteMovieById(this.props.id)
-            window.location.reload()
+            setTimeout( 
+                function() {
+                    window.location.reload()
+                }, 800);
         }
     }
 

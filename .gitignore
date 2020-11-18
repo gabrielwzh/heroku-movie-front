@@ -2,3 +2,6 @@
 
 # no modules
 node_modules
+
+# secret env var
+.env
